@@ -20,6 +20,16 @@
 		<artifactId>javax.servlet-api</artifactId>
 		<version>3.1.0</version>
 	</dependency>
+	<dependency>
+		<groupId>com.study.smsi</groupId>
+		<artifactId>smsi-service</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</dependency>
+	<dependency>
+		<groupId>com.study.smsi</groupId>
+		<artifactId>smsi-common</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</dependency>
   </dependencies>
   <build>
     <finalName>smsi-web</finalName>
