@@ -15,6 +15,7 @@
     <module>smsi-dao</module>
     <module>smsi-msg</module>
     <module>smsi-common</module>
+    <module>smsi-service</module>
   </modules>
   
   <properties>
