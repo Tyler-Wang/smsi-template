@@ -8,14 +8,17 @@
   	<version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>smsi-msg-aq</artifactId>
-  <packaging>jar</packaging>
-  
   <name>smsi-msg-aq</name>
   <url>http://maven.apache.org</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <dependencies>
+    <dependency>
+      <groupId>org.apache.activemq</groupId>
+      <artifactId>activemq-all</artifactId>
+      <version>5.11.1</version>
+    </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
