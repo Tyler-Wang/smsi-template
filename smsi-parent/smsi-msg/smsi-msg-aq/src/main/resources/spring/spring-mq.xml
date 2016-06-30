@@ -28,10 +28,21 @@
 		<property name="sessionCacheSize" value="50"></property>
 	</bean>
 	
-	<!-- 配置JMS模版 普通消息生产者，业务代码最终会调用来发送消息-->
-	<bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">
+	<!-- JMS模版 普通Queue消息生产者-->
+	<bean id="jmsQueueTemplate" class="org.springframework.jms.core.JmsTemplate">
 		<property name="connectionFactory" ref="cachingConnectionFactory" />
 	</bean>
 	
+	<!-- JMS模版 Topic消息生产者-->
+	<bean id="jmsTopicTemplate" class="org.springframework.jms.core.JmsTemplate">
+		<property name="connectionFactory" ref="cachingConnectionFactory" />
+		<!-- pub/sub模型（发布/订阅） -->
+		<property name="pubSubDomain" value="true"></property>
+	</bean>
 	
+	<!-- ActiveMQ消息生产者 -->
+	<bean id="AqMessageProducer" class="com.smsi.msg.aq.model.producer.AqMessageProducer">
+		<property name="jmsQueueTemplate" ref="jmsQueueTemplate"/>
+		<property name="jmsTopicTemplate" ref="jmsTopicTemplate"/>
+	</bean>
 </beans>

@@ -10,7 +10,7 @@ public abstract class MqMessage implements Serializable {
 	
 	private String msgId; //消息Id
 
-	public abstract MqQueueName getQueueName();
+	public abstract MqQueueName getQueue();
 	
 	public String getMsgId() {
 		return msgId;
