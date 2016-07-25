@@ -1,4 +1,4 @@
-package org.smsi.pattern.model;
+package com.smsi.pattern.model;
 
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.atomic.AtomicInteger;
