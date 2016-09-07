@@ -123,7 +123,7 @@ public class SelfClearRecordCache<K, V> {
 		public void run() {
 			// TODO Auto-generated method stub
 			try {
-				logger.info("[" + cacheName + "] 缓存开始清理");
+				logger.info("[" + cacheName + "] 缓存开始清理，总数：{}",cache.size());
 				int count = removeExpiryRecord();
 				logger.info("[" + cacheName + "] 缓存清理记录数量：{}", count);
 			} catch (Throwable e) {
