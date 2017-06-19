@@ -1,4 +1,4 @@
-package com.smsi.pattern.model;
+package com.smsi.pattern.model.recordcache.selfclear;
 
 import java.util.Date;
 import java.util.Enumeration;
@@ -9,6 +9,8 @@ import java.util.concurrent.TimeUnit;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import com.smsi.pattern.model.CustomThreadFactory;
 
 /**
  * @author wangj
@@ -63,22 +65,6 @@ public class SelfClearRecordCache<K, V> {
 	 * @return
 	 */
 	private int removeExpiryRecord(){
-//		logger.info("cache size: {}", cache.size());
-//		int count = 0;
-//		long currDateTime = new Date().getTime();
-//		logger.info("init cache keySet iterator");
-//		Iterator<String> iter = cache.keySet().iterator();
-//		logger.info("init cache keySet iterator done");
-//		while(iter.hasNext()){
-//			String key = iter.next();
-//			logger.info("next key: {}", key);
-//			if((currDateTime - cache.get(key).getTime()) >= recordExpiryTime * 60 * 1000){
-//				logger.info("remove key: {}", key);
-//				cache.remove(key);
-//				count++;
-//			}
-//		}
-//		return count;
 		//因ConcurrentHashMap.keySet()在jdk7版本返回Set，jdk8版本KeySetView，不兼容，改为keys()实现
 		logger.debug("cache size: {}", cache.size());
 		int count = 0;
