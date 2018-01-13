@@ -58,25 +58,4 @@ public class ReflectionUtil {
 		
 	}
 	
-	private class NoGenericClass{
-		
-	}
-	
-	private abstract class GenericInter<T, P>{
-		public abstract void doSome(T t);
-	}
-	
-	private class StringGenericInter extends GenericInter<String, Integer>{
-
-		@Override
-		public void doSome(String t) {
-			// TODO Auto-generated method stub
-			
-		}
-		
-	}
-	
-	public static void main(String[] args) {
-		System.out.println(ReflectionUtil.getExtendClassGenericType(StringGenericInter.class).length);
-	}
 }
